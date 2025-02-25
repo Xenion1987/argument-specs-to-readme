@@ -1,0 +1,59 @@
+Ansible role: {{ meta.galaxy_info.role_name }}
+===
+
+{% if badges.code_versioning_platform == "GitHub" -%}
+[![CI](https://github.com/{{ badges.code_versioning_organization }}/{{ badges.code_versioning_repository }}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{ badges.code_versioning_organization }}/{{ badges.code_versioning_repository }}/actions/workflows/ci.yml)
+{%- endif %}
+{% if badges.uploaded_to_galaxy -%}
+[![Ansible Galaxy downloads](https://img.shields.io/ansible/role/d/{{ meta.galaxy_info.author }}/{{ meta.galaxy_info.role_name }}?label=Galaxy%20downloads&logo=ansible&color=%23096598)](https://galaxy.ansible.com/ui/standalone/roles/{{ meta.galaxy_info.author }}/{{ meta.galaxy_info.role_name }})
+{%- endif %}
+
+{{ meta.galaxy_info.description }}
+
+Requirements
+---
+
+{% if meta.collections -%}
+- Collections:
+{%- for collection in meta.collections %}
+  - {{ collection }}
+{%- endfor %}
+{% endif -%}
+{% if meta.galaxy_info.min_ansible_version -%}
+- Min. Ansible version: {{ meta.galaxy_info.min_ansible_version }}
+{%- endif %}
+
+Role Variables
+---
+
+{{ arg_specs }}
+
+Dependencies
+---
+
+{% if meta.dependencies -%}
+{{ meta.dependencies }}
+{%- else -%}
+None
+{%- endif %}
+
+Example Playbook
+---
+
+```yaml
+- name: "Play | {{ meta.galaxy_info.role_name }}"
+  hosts: all
+  roles:
+    - role: {{ meta.galaxy_info.role_name }}
+```
+
+License
+---
+
+{{ meta.galaxy_info.license }}
+
+Author Information
+---
+
+{{ meta.galaxy_info.author }}{% if meta.galaxy_info.company %} @ {{ meta.galaxy_info.company }}{% endif %}
+
