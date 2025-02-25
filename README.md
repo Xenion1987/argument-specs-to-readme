@@ -12,7 +12,8 @@ Example in- and output files:
 ### Requirements
 
 - Python 3
-- `jinja2` and `pyyaml` libraries (install via `pip install jinja2 pyyaml`)
+- 
+- `jinja2`, `pyyaml` and `requests` libraries (install via `pip install jinja2 pyyaml requests`)
 
 ### Usage
 
