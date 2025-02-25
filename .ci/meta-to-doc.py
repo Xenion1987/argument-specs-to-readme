@@ -23,7 +23,7 @@ def parse_yaml_file(yaml_file):
     return data
 
 def parse_options(options, parent_key=""):
-    """Rekursives Parsen der `options`-Struktur und Umwandlung in Markdown."""
+    """Recursively parses the `options` structure and converts it into Markdown."""
     if not isinstance(options, dict):
         return ""
     
@@ -49,14 +49,14 @@ def parse_options(options, parent_key=""):
         
         section += f"{md_line}|\n"
         
-        # Falls geschachtelte `options` existieren, rekursiv weiter verarbeiten
+        # If nested `options` exist, process them recursively
         if 'options' in value and isinstance(value['options'], dict):
             section += parse_options(value['options'], full_key)
     
     return section
 
 def generate_argspecs_variables(specs):
-    """Generiert Markdown-Dokumentation basierend auf Argument-Spezifikationen."""
+    """Generates Markdown documentation based on argument specifications."""
     section_variables = ""
     for category, arguments in specs.items():
         section_variables += f"{category}\n---\n\n"
