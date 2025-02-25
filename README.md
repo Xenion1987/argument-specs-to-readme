@@ -4,6 +4,11 @@
 
 This script automatically generates a `README.md` file based on YAML files in `./meta/` and a Jinja2 template file.
 
+Example in- and output files:
+
+ - [ansible-role-sudoers](https://github.com/Xenion1987/ansible-role-sudoers)
+ - [ansible-role-user-management](https://github.com/Xenion1987/ansible-role-user-management)
+
 ### Requirements
 
 - Python 3
