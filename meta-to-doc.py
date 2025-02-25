@@ -13,7 +13,7 @@ meta_file_path = "./meta/main.yml"
 template_file_path = "./.ci"
 template_file_name = "README.md.j2"
 output_file_path = "README.md"
-template_url = "https://raw.githubusercontent.com/Xenion1987/argument-specs-to-readme/main/.ci/README.md.j2"
+template_url = "https://raw.githubusercontent.com/Xenion1987/argument-specs-to-readme/main/README.md.j2"
 
 def download_template(url):
     """Downloads the template file from the given URL as a string."""

@@ -21,7 +21,7 @@ Example in- and output files:
 Without additional arguments, the script fetches the Jinja2 template directly from GitHub and processes `README.md` accordingly:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/Xenion1987/argument-specs-to-readme/main/.ci/meta-to-doc.py | python3
+curl -sL https://raw.githubusercontent.com/Xenion1987/argument-specs-to-readme/main/meta-to-doc.py | python3
 ```
 
 #### Offline Mode
